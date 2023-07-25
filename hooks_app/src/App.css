@@ -1,0 +1,9 @@
+.App {
+    width: 80vw;
+    height: 100vh;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}

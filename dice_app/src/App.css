@@ -1,0 +1,22 @@
+.pad {
+    padding: 10px;
+}
+
+.active {
+    background-color: bisque;
+}
+
+.dice {
+    font-size: large;
+    font-weight: bold;
+}
+
+.msg {
+    font-size: larger;
+    font-weight: bold;
+    color: red;
+}
+
+.winner {
+    background-color: lightgreen;
+}

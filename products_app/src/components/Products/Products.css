@@ -1,0 +1,8 @@
+.Products {
+  min-height: calc(100% - 70px);
+  height: max-content;
+}
+
+.Products > h2 {
+  font-size: 1.4em;
+}

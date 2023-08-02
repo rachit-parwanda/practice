@@ -1,0 +1,31 @@
+.cart-btn {
+	padding: 10px 20px;
+	background-color: burlywood;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	font-size: large;
+}
+
+.cart-btn:hover {
+	cursor: pointer;
+	transition: background-color .3s ease-in-out;
+	background-color: rgb(247, 163, 53);
+}
+
+.cart-btn-multi {
+	padding: 10px;
+	background-color: burlywood;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	font-size: large;
+}
+
+.cart-btn-multi:hover {
+	cursor: pointer;
+	transition: background-color .3s ease-in-out;
+	background-color: rgb(247, 163, 53);
+}
+
+.item-count {
+	font-size: 1.3em;
+	font-weight: bold;
+	padding: 0 10px;
+}

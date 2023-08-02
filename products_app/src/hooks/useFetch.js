@@ -1,28 +1,29 @@
 import { useCallback, useState } from "react";
 
-const useFetch = () => {
+export const useFetch = () => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [errorMsg, setErrorMsg] = useState(null);
 
   const fetchData = useCallback((url, options) => {
     setIsLoading(true);
-    setError(null);
+    setErrorMsg(null);
 
     fetch(url, options)
       .then((res) => {
-        if (!res.ok) throw new Error(`unable to fetch data`);
+        if (!res.ok)
+          throw new Error(`unable to fetch data.\nStatus ${res.status}`);
         else return res.json();
       })
       .then((data) => {
         setData(data);
         setIsLoading(false);
-        setError(null);
+        setErrorMsg(null);
       })
       .catch((err) => {
         setData(null);
         setIsLoading(false);
-        setError(err.message);
+        setErrorMsg(err.message);
       });
   }, []);
 
@@ -32,12 +33,10 @@ const useFetch = () => {
     },
     state: {
       isLoading,
-      error,
+      errorMsg,
     },
     actions: {
       fetchData,
     },
   };
 };
-
-export default useFetch;

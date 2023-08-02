@@ -162,6 +162,9 @@ p.then((value) => {
     console.log("catch error: ", error.message);
   });
 
+p.then(() => {
+  console.log("separate then");
+});
 //
 //
 //

@@ -1,23 +1,24 @@
-import { useHistory } from "react-router-dom";
-import ActionButton from "../UI/ActionButton";
+import { useNavigate } from "react-router-dom";
+import ActionButton from "../../containers/UI/ActionButton";
 import Card from "../UI/Card";
 import "./CartItem.css";
 
 const CartItem = ({ product, count, onAddProduct, onRemoveProduct }) => {
-  const { image, category, title, description, price } = product;
-  const history = useHistory();
+  const navigate = useNavigate();
+
+  const { id, image, category, title, description, price } = product;
 
   const showDescription = (id) => {
-    history.push(`/products/${product.id}`);
+    navigate(`/products/${product.id}`);
   };
 
   return (
     <Card className="CartItem">
-      <div className="left" onClick={() => showDescription(product.id)}>
+      <div className="left" onClick={() => showDescription(id)}>
         <img src={image} alt={category} />
       </div>
       <div className="right">
-        <h3 className="title" onClick={() => showDescription(product.id)}>
+        <h3 className="title" onClick={() => showDescription(id)}>
           {title}
         </h3>
         <hr />
@@ -25,9 +26,8 @@ const CartItem = ({ product, count, onAddProduct, onRemoveProduct }) => {
         <div className="actions">
           <div className="price">${price}</div>
           <ActionButton
-            onAddProduct={onAddProduct}
-            onRemoveProduct={onRemoveProduct}
-            product={product}
+            onAddProduct={() => onAddProduct(product)}
+            onRemoveProduct={() => onRemoveProduct(product)}
             count={count}
           />
         </div>

@@ -1,10 +1,10 @@
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../../containers/Navbar/Navbar";
 import "./Layout.css";
 
-const Layout = ({ cartCount, children }) => {
+const Layout = ({ children }) => {
   return (
     <div className="Layout">
-      <Navbar cartCount={cartCount} />
+      <Navbar />
       <div className="content">{children}</div>
     </div>
   );

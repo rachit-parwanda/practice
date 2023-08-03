@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import { useParams } from "react-router-dom";
+import { ProductsContext } from "../../context/ProductsContext";
 import "./ProductDetails.css";
 
-const ProductDetails = ({ products }) => {
+const ProductDetails = () => {
   const { id } = useParams();
+  const { products } = useContext(ProductsContext);
+
   const { image, category, title, description, price } = products.find(
     (product) => product.id === +id
   ); // id is number in this case, usually it will be a string

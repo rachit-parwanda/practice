@@ -1,0 +1,15 @@
+.ProductList {
+  min-height: calc(100% - 70px);
+  height: max-content;
+}
+
+.ProductList h2 {
+  font-size: 1.4em;
+}
+
+.ProductList .list {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1em;
+}

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./ActionButton.css";
 
-const ActionButton = ({ onAddProduct, onRemoveProduct, product, count }) => {
+const ActionButton = ({ onAddProduct, onRemoveProduct, count }) => {
   const [showMultiBtn, setShowMultiBtn] = useState(false);
 
   useEffect(() => {
@@ -14,19 +14,16 @@ const ActionButton = ({ onAddProduct, onRemoveProduct, product, count }) => {
 
   return showMultiBtn ? (
     <div>
-      <button
-        className="cart-btn-multi"
-        onClick={() => onRemoveProduct(product)}
-      >
+      <button className="cart-btn-multi" onClick={onRemoveProduct}>
         -
       </button>
       <span className="item-count">{count}</span>
-      <button className="cart-btn-multi" onClick={() => onAddProduct(product)}>
+      <button className="cart-btn-multi" onClick={onAddProduct}>
         +
       </button>
     </div>
   ) : (
-    <button className="cart-btn" onClick={() => onAddProduct(product)}>
+    <button className="cart-btn" onClick={onAddProduct}>
       Add to Cart
     </button>
   );

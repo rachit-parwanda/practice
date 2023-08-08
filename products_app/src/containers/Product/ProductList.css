@@ -3,13 +3,13 @@
   height: max-content;
 }
 
-.ProductList h2 {
-  font-size: 1.4em;
+.ProductList h3 {
+  /* font-size: 1.4em; */
+  margin-bottom: 20px;
 }
 
-.ProductList .list {
-  margin-top: 20px;
+/* .ProductList .list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1em;
-}
+} */

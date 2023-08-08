@@ -1,4 +1,10 @@
-.cart-btn {
+.ActionButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* .cart-btn {
   padding: 10px 20px;
   background-color: burlywood;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -22,10 +28,10 @@
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
   background-color: rgb(247, 163, 53);
-}
+} */
 
 .item-count {
-  font-size: 1.3em;
-  font-weight: bold;
+  /* font-size: 1.3em;
+  font-weight: bold; */
   padding: 0 10px;
 }

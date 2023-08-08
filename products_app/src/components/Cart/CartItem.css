@@ -1,49 +1,56 @@
 .CartItem {
   width: 100%;
-  max-width: 1200px;
   height: 300px;
+  margin: 20px 0;
+  /* max-width: 1200px;
+  height: 300px; */
+  /* display: flex; */
+}
+
+.CartItem .content {
   display: flex;
 }
 
 .CartItem .left {
   background-color: white;
+  /* display: inline-block; */
   padding: 10px;
   width: 20%;
-  min-width: 250px;
+  min-width: 300px;
   height: 100%;
-  min-height: 250px;
-  border-radius: 8px 0 0 8px;
+  min-height: 300px;
+  /* border-radius: 8px 0 0 8px; */
   cursor: pointer;
 }
 
-.CartItem .left img {
-  /* border-radius: 8px 0 0 8px; */
+/* .CartItem .left img {
+  border-radius: 8px 0 0 8px;
   width: 100%;
   height: 100%;
-}
+} */
 
 .CartItem .right {
   padding: 20px;
   width: 80%;
-  height: 100%;
-  text-align: justify;
+  height: 300px;
+  /* text-align: justify; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  border-radius: 0 0 8px 8px;
+  /* border-radius: 0 0 8px 8px; */
 }
 
 .CartItem .title {
   flex-grow: 0;
   width: 100%;
-  font-size: 1.5em;
-  font-weight: bold;
+  /* font-size: 1.5em;
+  font-weight: bold; */
   cursor: pointer;
 }
 
 .CartItem .title:hover {
-  color: rgb(65, 65, 224);
+  /* color: rgb(65, 65, 224); */
   text-decoration: underline;
 }
 
@@ -57,7 +64,7 @@
 .CartItem .description {
   flex-grow: 1;
   width: 100%;
-  font-size: 1.2em;
+  /* font-size: 1.2em; */
 }
 
 .CartItem .actions {
@@ -68,7 +75,7 @@
   justify-content: space-between;
 }
 
-.CartItem .price {
+/* .CartItem .price {
   font-size: 1.5em;
   font-weight: bold;
-}
+} */

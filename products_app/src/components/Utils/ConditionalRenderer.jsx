@@ -12,7 +12,7 @@ const ConditionalRenderer = ({
     return "No products to show";
   }
 
-  return <div>{children}</div>;
+  return children;
 };
 
 export default ConditionalRenderer;
